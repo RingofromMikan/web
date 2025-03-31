@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>webサイト</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+    <body>
+        <h4>なずな祭</h4>
+        <h5>高校1年生特設webページ</h5>
+        <div class="tabs">
+            <input id="waitingtime" type="radio" name="tab_item" checked> 
+            <label class="tab_item" for="waitingtime">クラスの待ち時間</label>
+            <input id="map" type="radio" name="tab_item">
+            <label class="tab_item" for="map">学校マップ</label>
+            <input id="brochure" type="radio" name="tab_item">
+            <label class="tab_item" for="brochure">なずな祭パンフレット</label>
+            <input id="lostThing" type="radio" name="tab_item">
+            <label class="tab_item" for="lostThing">落とし物・迷子</label>
+            <div class="tab_content" id="waitingtime_content">
+                <div class="tab_content_description">
+                    <div class="tab_content_description">
+                        <select id="classes">
+                            <option value="1" selected>1組</option>
+                            <option value="2">2組</option>
+                            <option value="3">3組</option>
+                            <option value="4">4組</option>
+                            <option value="5">5組</option>
+                            <option value="6">6組</option>
+                            <option value="7">7組</option>
+                            <option value="8">8組</option>
+                            <option value="9">9組</option>
+                            <option value="10">10組</option>
+                            <option value="11">11組</option>
+                        </select>
+                        <div id="InPeopleArea">
+                            <button id="InPeoplePlus">追加!</button>
+                            <h3>現在並んでいる人数</h3>
+                            <h1><span id="Waiting" style="color: red">0</span>人</h1>
+                        </div>
+                        <div id="OutPeopleArea">
+                            <button id="OutPeoplePlus">追加!</button>
+                            <h3>対応が完了した人数</h3>
+                            <h1><span id="Done" style="color:red">0</span>人</h1>
+                        </div>
+                        <h1>現在の待ち時間の目安 : <span id="WaitTime" style="color: red">0</span>分</h1>
+                        <a href="javascript:WaitTimeCalc()" style="text-decoration: underline">強制計算</a>
+                        <canvas id="Graph"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_content" id="map_content">
+                <div class="tab_content_description">
+                    <p class="c-txtsp">学校のマップがここに貼られます</p>
+                </div>
+            </div>
+            <div class="tab_content" id="brochure_content">
+                <div class="tab_content_description">
+                    <p class="c-txtsp">なずな祭のパンフレットが貼られます</p>
+                </div>
+            </div>
+            <div class="tab_content" id="lostThing_content">
+                <div class="tab_content_description">
+                    <p class="c-txtsp" onclick="location.href='https://www.google.com'" style="color:blue">落とし物・迷子を発見した方はタップしてください</p>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
