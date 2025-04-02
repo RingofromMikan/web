@@ -121,7 +121,7 @@ function WaitTimeCalc() {
 /*
 function Send(Data) {
     let SendData = new FormData();
-    SendData.append("Translation", SendData);
+    SendData.append("Rotation", RawSendData);
     fetch("POST", {
         method: "POST",
         body: SendData
